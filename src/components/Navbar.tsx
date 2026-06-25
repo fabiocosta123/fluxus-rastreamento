@@ -39,6 +39,10 @@ export default function Navbar() {
             <a href="#beneficios" className="text-base font-medium text-slate-300 hover:text-white transition-colors">
               Benefícios
             </a>
+
+            <a href="#quem-somos" className="text-base font-medium text-slate-300 hover:text-white transition-colors">
+              Quem Somos
+            </a>
             <a href="#contato" className="text-base font-medium text-slate-300 hover:text-white transition-colors">
               Contato
             </a>
@@ -98,6 +102,14 @@ export default function Navbar() {
             >
               Benefícios
             </a>
+
+            <a 
+              href="#quem-somos" 
+              onClick={closeMenu}
+              className="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
+            >
+              Quem Somos
+            </a>
             <a 
               href="#contato" 
               onClick={closeMenu}
@@ -105,6 +117,7 @@ export default function Navbar() {
             >
               Contato
             </a>
+
             
             {/* Botão de Sistema dentro do Menu Mobile */}
             <div className="pt-4 mt-2 border-t border-slate-800">

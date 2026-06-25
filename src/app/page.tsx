@@ -4,6 +4,7 @@ import Beneficios from '@/components/Beneficios';
 import Produtos from "@/components/Produtos";
 import Contato from "@/components/Contato";
 import WhatsAppButton from '@/components/WhatsAppButton';
+import QuemSomos from '@/components/QuemSomos';
 
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <Beneficios />
       <Produtos />
+      <QuemSomos />
       <Contato />
 
       <WhatsAppButton />
