@@ -1,6 +1,14 @@
-import React from 'react';
+import Image from "next/image";
 
 export default function QuemSomos() {
+  // Dados das empresas para facilitar a manutenção
+  const empresas = [
+    { src: "/logoGrupoCunhaSilva.png", alt: "Grupo Cunha Silva", label: "Grupo Cunha Silva" },
+    { src: "/livrariaAbraao.png", alt: "Livraria Abraão", label: "Livraria Abraão" },
+    { src: "/restauranteDaju.png", alt: "Restaurante Daju", label: "Restaurante Daju" },
+    { src: "/acheiLa.png", alt: "Achei Lá", label: "Achei Lá" },
+  ];
+
   return (
     <section id="quem-somos" className="py-24 bg-slate-950">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -28,6 +36,31 @@ export default function QuemSomos() {
             </p>
           </div>
 
+          <div className="mt-16 border-t border-slate-800 pt-12">
+            <h3 className="text-xl font-bold text-white text-center mb-10">
+              Empresas do <span className="text-sky-400">Grupo Cunha Silva</span>
+            </h3>
+
+            {/* Grid com items-stretch para forçar a mesma altura em todos os cards */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-stretch">
+              {empresas.map((empresa, index) => (
+                <div key={index} className="flex flex-col items-center justify-between p-4 bg-slate-800/30 rounded-xl border border-slate-700/50 grayscale hover:grayscale-0 transition-all">
+                  <div className="relative w-full h-24 flex items-center justify-center">
+                    <Image 
+                      src={empresa.src} 
+                      alt={empresa.alt} 
+                      width={120} 
+                      height={60} 
+                      className="object-contain max-h-20" 
+                    />
+                  </div>
+                  <span className="text-xs md:text-sm text-slate-400 mt-4 font-medium text-center">
+                    {empresa.label}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
