@@ -1,7 +1,7 @@
-import React from 'react';
+import Image from "next/image";
 
 export default function Hero() {
-  // Substitua pelo seu número real do WhatsApp
+  
   const urlWhatsapp = "https://wa.me/5513996285971?text=Olá! Gostaria de um orçamento para o Fluxus Rastreamento.";
 
   return (
@@ -36,11 +36,19 @@ export default function Hero() {
               <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
               <span className="w-3 h-3 rounded-full bg-emerald-500"></span>
             </div>
-            <div className="bg-slate-950 aspect-video rounded-lg flex flex-col items-center justify-center border border-slate-800 text-slate-500 text-sm p-4 text-center">
+            {/* <div className="bg-slate-950 aspect-video rounded-lg flex flex-col items-center justify-center border border-slate-800 text-slate-500 text-sm p-4 text-center">
                <svg className="w-12 h-12 mb-3 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                </svg>
                [Interface do Mapa / Sistema Fluxus]
+            </div> */}
+            <div className="relative aspect-video rounded-lg overflow-hidden border border-slate-800">
+               <Image 
+                 src="/mapa.png" 
+                 alt="Interface do Sistema Fluxus" 
+                 fill
+                 className="object-cover"
+               />
             </div>
           </div>
         </div>
