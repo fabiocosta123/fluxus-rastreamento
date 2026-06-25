@@ -10,9 +10,11 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   
-  webpack: (config: any, options: { dev: boolean; isServer: boolean }) => {
-    return config;
+   webpack: (config: any, options: { dev: boolean; isServer: boolean }) => {
+     return config;
   },
+
+  
 };
 
 
